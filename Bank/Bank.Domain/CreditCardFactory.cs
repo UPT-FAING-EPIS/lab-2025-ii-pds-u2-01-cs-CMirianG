@@ -2,7 +2,7 @@ namespace Bank.Domain
 {
     public class CreditCardFactory
     {
-        public static ICreditCard GetCreditCard(string cardType)
+        public static ICreditCard? GetCreditCard(string cardType)
         {
             ICreditCard? cardDetails = null;
             if (cardType == "MoneyBack")

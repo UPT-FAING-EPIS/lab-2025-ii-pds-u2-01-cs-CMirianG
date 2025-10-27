@@ -15,6 +15,26 @@ namespace Bank.Domain.Tests
             Assert.That(cardDetails.GetCreditLimit(), Is.GreaterThanOrEqualTo(0));
             Assert.That(cardDetails.GetAnnualCharge(), Is.GreaterThanOrEqualTo(0));
         }
+        [Test]
+        public void GivenCreditTypePlatinumChoosen_WhenRequestCreditCard_ThenNewValidCreditCard()
+        {
+            ICreditCard creditCard = new PlatinumFactoryMethod().CreateProduct();
+            Assert.That(creditCard, Is.Not.Null);
+            Assert.That(creditCard.GetCardType(), Is.Not.Empty);
+            Assert.That(creditCard.GetCreditLimit(), Is.GreaterThanOrEqualTo(0));
+            Assert.That(creditCard.GetAnnualCharge(), Is.GreaterThanOrEqualTo(0));
+        }
+
+        [Test]
+        public void GivenCreditTypeTitaniumChoosen_WhenRequestCreditCard_ThenNewValidCreditCard()
+        {
+            ICreditCard creditCard = new TitaniumFactoryMethod().CreateProduct();
+            Assert.That(creditCard, Is.Not.Null);
+            Assert.That(creditCard.GetCardType(), Is.Not.Empty);
+            Assert.That(creditCard.GetCardType(), Is.EqualTo("Titanium Edge"));
+            Assert.That(creditCard.GetCreditLimit(), Is.GreaterThanOrEqualTo(0));
+            Assert.That(creditCard.GetAnnualCharge(), Is.GreaterThanOrEqualTo(0));
+        }
     }
 }
 
