@@ -51,6 +51,7 @@ jobs:
           --logger "console;verbosity=detailed"
     
     - name: Upload coverage reports to Codecov
+      if: always()
       uses: codecov/codecov-action@v3
       with:
         files: Bank/**/coverage.cobertura.xml
@@ -59,6 +60,7 @@ jobs:
         fail_ci_if_error: false
     
     - name: SonarCloud Scan
+      if: ${{ secrets.SONAR_TOKEN != '' }}
       uses: SonarSource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -73,6 +75,10 @@ jobs:
           -Dsonar.exclusions=**/bin/**,**/obj/**,**/TestResults/**,**/_site/**
           -Dsonar.sources=Bank/Bank.Domain
           -Dsonar.tests=Bank/Bank.Domain.Tests
+    
+    - name: Skip SonarCloud Scan
+      if: ${{ secrets.SONAR_TOKEN == '' }}
+      run: echo "SonarCloud scan skipped - SONAR_TOKEN not configured"
     
     - name: Publish test results
       uses: dorny/test-reporter@v1
