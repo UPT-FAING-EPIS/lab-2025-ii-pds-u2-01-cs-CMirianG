@@ -1,0 +1,185 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bank.Domain.ICreditCard
+  commentId: T:Bank.Domain.ICreditCard
+  id: ICreditCard
+  parent: Bank.Domain
+  children:
+  - Bank.Domain.ICreditCard.GetAnnualCharge
+  - Bank.Domain.ICreditCard.GetCardType
+  - Bank.Domain.ICreditCard.GetCreditLimit
+  langs:
+  - csharp
+  - vb
+  name: ICreditCard
+  nameWithType: ICreditCard
+  fullName: Bank.Domain.ICreditCard
+  type: Interface
+  source:
+    remote:
+      path: Bank/Bank.Domain/ICreditCard.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-ii-pds-u2-01-cs-CMirianG.git
+    id: ICreditCard
+    path: Bank.Domain/ICreditCard.cs
+    startLine: 2
+  assemblies:
+  - Bank.Domain
+  namespace: Bank.Domain
+  syntax:
+    content: public interface ICreditCard
+    content.vb: Public Interface ICreditCard
+- uid: Bank.Domain.ICreditCard.GetCardType
+  commentId: M:Bank.Domain.ICreditCard.GetCardType
+  id: GetCardType
+  parent: Bank.Domain.ICreditCard
+  langs:
+  - csharp
+  - vb
+  name: GetCardType()
+  nameWithType: ICreditCard.GetCardType()
+  fullName: Bank.Domain.ICreditCard.GetCardType()
+  type: Method
+  source:
+    remote:
+      path: Bank/Bank.Domain/ICreditCard.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-ii-pds-u2-01-cs-CMirianG.git
+    id: GetCardType
+    path: Bank.Domain/ICreditCard.cs
+    startLine: 4
+  assemblies:
+  - Bank.Domain
+  namespace: Bank.Domain
+  syntax:
+    content: string GetCardType()
+    return:
+      type: System.String
+    content.vb: Function GetCardType() As String
+  overload: Bank.Domain.ICreditCard.GetCardType*
+- uid: Bank.Domain.ICreditCard.GetCreditLimit
+  commentId: M:Bank.Domain.ICreditCard.GetCreditLimit
+  id: GetCreditLimit
+  parent: Bank.Domain.ICreditCard
+  langs:
+  - csharp
+  - vb
+  name: GetCreditLimit()
+  nameWithType: ICreditCard.GetCreditLimit()
+  fullName: Bank.Domain.ICreditCard.GetCreditLimit()
+  type: Method
+  source:
+    remote:
+      path: Bank/Bank.Domain/ICreditCard.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-ii-pds-u2-01-cs-CMirianG.git
+    id: GetCreditLimit
+    path: Bank.Domain/ICreditCard.cs
+    startLine: 5
+  assemblies:
+  - Bank.Domain
+  namespace: Bank.Domain
+  syntax:
+    content: int GetCreditLimit()
+    return:
+      type: System.Int32
+    content.vb: Function GetCreditLimit() As Integer
+  overload: Bank.Domain.ICreditCard.GetCreditLimit*
+- uid: Bank.Domain.ICreditCard.GetAnnualCharge
+  commentId: M:Bank.Domain.ICreditCard.GetAnnualCharge
+  id: GetAnnualCharge
+  parent: Bank.Domain.ICreditCard
+  langs:
+  - csharp
+  - vb
+  name: GetAnnualCharge()
+  nameWithType: ICreditCard.GetAnnualCharge()
+  fullName: Bank.Domain.ICreditCard.GetAnnualCharge()
+  type: Method
+  source:
+    remote:
+      path: Bank/Bank.Domain/ICreditCard.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-ii-pds-u2-01-cs-CMirianG.git
+    id: GetAnnualCharge
+    path: Bank.Domain/ICreditCard.cs
+    startLine: 6
+  assemblies:
+  - Bank.Domain
+  namespace: Bank.Domain
+  syntax:
+    content: int GetAnnualCharge()
+    return:
+      type: System.Int32
+    content.vb: Function GetAnnualCharge() As Integer
+  overload: Bank.Domain.ICreditCard.GetAnnualCharge*
+references:
+- uid: Bank.Domain
+  commentId: N:Bank.Domain
+  href: Bank.html
+  name: Bank.Domain
+  nameWithType: Bank.Domain
+  fullName: Bank.Domain
+  spec.csharp:
+  - uid: Bank
+    name: Bank
+    href: Bank.html
+  - name: .
+  - uid: Bank.Domain
+    name: Domain
+    href: Bank.Domain.html
+  spec.vb:
+  - uid: Bank
+    name: Bank
+    href: Bank.html
+  - name: .
+  - uid: Bank.Domain
+    name: Domain
+    href: Bank.Domain.html
+- uid: Bank.Domain.ICreditCard.GetCardType*
+  commentId: Overload:Bank.Domain.ICreditCard.GetCardType
+  href: Bank.Domain.ICreditCard.html#Bank_Domain_ICreditCard_GetCardType
+  name: GetCardType
+  nameWithType: ICreditCard.GetCardType
+  fullName: Bank.Domain.ICreditCard.GetCardType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Bank.Domain.ICreditCard.GetCreditLimit*
+  commentId: Overload:Bank.Domain.ICreditCard.GetCreditLimit
+  href: Bank.Domain.ICreditCard.html#Bank_Domain_ICreditCard_GetCreditLimit
+  name: GetCreditLimit
+  nameWithType: ICreditCard.GetCreditLimit
+  fullName: Bank.Domain.ICreditCard.GetCreditLimit
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Bank.Domain.ICreditCard.GetAnnualCharge*
+  commentId: Overload:Bank.Domain.ICreditCard.GetAnnualCharge
+  href: Bank.Domain.ICreditCard.html#Bank_Domain_ICreditCard_GetAnnualCharge
+  name: GetAnnualCharge
+  nameWithType: ICreditCard.GetAnnualCharge
+  fullName: Bank.Domain.ICreditCard.GetAnnualCharge

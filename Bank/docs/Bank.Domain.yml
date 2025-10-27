@@ -1,0 +1,103 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bank.Domain
+  commentId: N:Bank.Domain
+  id: Bank.Domain
+  children:
+  - Bank.Domain.CreditCardFactory
+  - Bank.Domain.CreditCardFactoryMethod
+  - Bank.Domain.ICreditCard
+  - Bank.Domain.MoneyBack
+  - Bank.Domain.MoneyBackFactoryMethod
+  - Bank.Domain.Platinum
+  - Bank.Domain.PlatinumFactoryMethod
+  - Bank.Domain.Titanium
+  - Bank.Domain.TitaniumFactoryMethod
+  langs:
+  - csharp
+  - vb
+  name: Bank.Domain
+  nameWithType: Bank.Domain
+  fullName: Bank.Domain
+  type: Namespace
+  assemblies:
+  - Bank.Domain
+references:
+- uid: Bank.Domain.CreditCardFactory
+  commentId: T:Bank.Domain.CreditCardFactory
+  href: Bank.Domain.CreditCardFactory.html
+  name: CreditCardFactory
+  nameWithType: CreditCardFactory
+  fullName: Bank.Domain.CreditCardFactory
+- uid: Bank.Domain.CreditCardFactoryMethod
+  commentId: T:Bank.Domain.CreditCardFactoryMethod
+  parent: Bank.Domain
+  href: Bank.Domain.CreditCardFactoryMethod.html
+  name: CreditCardFactoryMethod
+  nameWithType: CreditCardFactoryMethod
+  fullName: Bank.Domain.CreditCardFactoryMethod
+- uid: Bank.Domain.ICreditCard
+  commentId: T:Bank.Domain.ICreditCard
+  parent: Bank.Domain
+  href: Bank.Domain.ICreditCard.html
+  name: ICreditCard
+  nameWithType: ICreditCard
+  fullName: Bank.Domain.ICreditCard
+- uid: Bank.Domain.MoneyBack
+  commentId: T:Bank.Domain.MoneyBack
+  href: Bank.Domain.MoneyBack.html
+  name: MoneyBack
+  nameWithType: MoneyBack
+  fullName: Bank.Domain.MoneyBack
+- uid: Bank.Domain.MoneyBackFactoryMethod
+  commentId: T:Bank.Domain.MoneyBackFactoryMethod
+  href: Bank.Domain.MoneyBackFactoryMethod.html
+  name: MoneyBackFactoryMethod
+  nameWithType: MoneyBackFactoryMethod
+  fullName: Bank.Domain.MoneyBackFactoryMethod
+- uid: Bank.Domain.Platinum
+  commentId: T:Bank.Domain.Platinum
+  href: Bank.Domain.Platinum.html
+  name: Platinum
+  nameWithType: Platinum
+  fullName: Bank.Domain.Platinum
+- uid: Bank.Domain.PlatinumFactoryMethod
+  commentId: T:Bank.Domain.PlatinumFactoryMethod
+  href: Bank.Domain.PlatinumFactoryMethod.html
+  name: PlatinumFactoryMethod
+  nameWithType: PlatinumFactoryMethod
+  fullName: Bank.Domain.PlatinumFactoryMethod
+- uid: Bank.Domain.Titanium
+  commentId: T:Bank.Domain.Titanium
+  href: Bank.Domain.Titanium.html
+  name: Titanium
+  nameWithType: Titanium
+  fullName: Bank.Domain.Titanium
+- uid: Bank.Domain.TitaniumFactoryMethod
+  commentId: T:Bank.Domain.TitaniumFactoryMethod
+  href: Bank.Domain.TitaniumFactoryMethod.html
+  name: TitaniumFactoryMethod
+  nameWithType: TitaniumFactoryMethod
+  fullName: Bank.Domain.TitaniumFactoryMethod
+- uid: Bank.Domain
+  commentId: N:Bank.Domain
+  href: Bank.html
+  name: Bank.Domain
+  nameWithType: Bank.Domain
+  fullName: Bank.Domain
+  spec.csharp:
+  - uid: Bank
+    name: Bank
+    href: Bank.html
+  - name: .
+  - uid: Bank.Domain
+    name: Domain
+    href: Bank.Domain.html
+  spec.vb:
+  - uid: Bank
+    name: Bank
+    href: Bank.html
+  - name: .
+  - uid: Bank.Domain
+    name: Domain
+    href: Bank.Domain.html

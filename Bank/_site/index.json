@@ -1,0 +1,82 @@
+{
+  "Cobertura/SummaryGithub.html": {
+    "href": "Cobertura/SummaryGithub.html",
+    "title": "Summary | Bank App",
+    "summary": "Summary Summary Generated on: 27/10/2025 - 00:01:39 Coverage date: 26/10/2025 - 21:16:38 - 27/10/2025 - 00:01:09 Parser: MultiReport (5x Cobertura) Assemblies: 1 Classes: 8 Files: 8 Line coverage: 79.6% (47 of 59) Covered lines: 47 Uncovered lines: 12 Coverable lines: 59 Total lines: 130 Branch coverage: 33.3% (2 of 6) Covered branches: 2 Total branches: 6 Method coverage: Feature is only available for sponsors Coverage Bank.Domain - 79.6% Name Line Branch Bank.Domain 79.6% 33.3% Bank.Domain.CreditCardFactory 50% 33.3% Bank.Domain.CreditCardFactoryMethod 100% Bank.Domain.MoneyBack 100% Bank.Domain.MoneyBackFactoryMethod 0% Bank.Domain.Platinum 100% Bank.Domain.PlatinumFactoryMethod 100% Bank.Domain.Titanium 100% Bank.Domain.TitaniumFactoryMethod 100%"
+  },
+  "docs/Bank.Domain.CreditCardFactory.html": {
+    "href": "docs/Bank.Domain.CreditCardFactory.html",
+    "title": "Class CreditCardFactory | Bank App",
+    "summary": "Class CreditCardFactory Namespace Bank.Domain Assembly Bank.Domain.dll public class CreditCardFactory Inheritance object CreditCardFactory Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GetCreditCard(string) public static ICreditCard? GetCreditCard(string cardType) Parameters cardType string Returns ICreditCard"
+  },
+  "docs/Bank.Domain.CreditCardFactoryMethod.html": {
+    "href": "docs/Bank.Domain.CreditCardFactoryMethod.html",
+    "title": "Class CreditCardFactoryMethod | Bank App",
+    "summary": "Class CreditCardFactoryMethod Namespace Bank.Domain Assembly Bank.Domain.dll public abstract class CreditCardFactoryMethod Inheritance object CreditCardFactoryMethod Derived MoneyBackFactoryMethod PlatinumFactoryMethod TitaniumFactoryMethod Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods CreateProduct() public ICreditCard CreateProduct() Returns ICreditCard MakeProduct() protected abstract ICreditCard MakeProduct() Returns ICreditCard"
+  },
+  "docs/Bank.Domain.ICreditCard.html": {
+    "href": "docs/Bank.Domain.ICreditCard.html",
+    "title": "Interface ICreditCard | Bank App",
+    "summary": "Interface ICreditCard Namespace Bank.Domain Assembly Bank.Domain.dll public interface ICreditCard Methods GetAnnualCharge() int GetAnnualCharge() Returns int GetCardType() string GetCardType() Returns string GetCreditLimit() int GetCreditLimit() Returns int"
+  },
+  "docs/Bank.Domain.MoneyBack.html": {
+    "href": "docs/Bank.Domain.MoneyBack.html",
+    "title": "Class MoneyBack | Bank App",
+    "summary": "Class MoneyBack Namespace Bank.Domain Assembly Bank.Domain.dll public class MoneyBack : ICreditCard Inheritance object MoneyBack Implements ICreditCard Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GetAnnualCharge() public int GetAnnualCharge() Returns int GetCardType() public string GetCardType() Returns string GetCreditLimit() public int GetCreditLimit() Returns int"
+  },
+  "docs/Bank.Domain.MoneyBackFactoryMethod.html": {
+    "href": "docs/Bank.Domain.MoneyBackFactoryMethod.html",
+    "title": "Class MoneyBackFactoryMethod | Bank App",
+    "summary": "Class MoneyBackFactoryMethod Namespace Bank.Domain Assembly Bank.Domain.dll public class MoneyBackFactoryMethod : CreditCardFactoryMethod Inheritance object CreditCardFactoryMethod MoneyBackFactoryMethod Inherited Members CreditCardFactoryMethod.CreateProduct() object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods MakeProduct() protected override ICreditCard MakeProduct() Returns ICreditCard"
+  },
+  "docs/Bank.Domain.Platinum.html": {
+    "href": "docs/Bank.Domain.Platinum.html",
+    "title": "Class Platinum | Bank App",
+    "summary": "Class Platinum Namespace Bank.Domain Assembly Bank.Domain.dll public class Platinum : ICreditCard Inheritance object Platinum Implements ICreditCard Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GetAnnualCharge() public int GetAnnualCharge() Returns int GetCardType() public string GetCardType() Returns string GetCreditLimit() public int GetCreditLimit() Returns int"
+  },
+  "docs/Bank.Domain.PlatinumFactoryMethod.html": {
+    "href": "docs/Bank.Domain.PlatinumFactoryMethod.html",
+    "title": "Class PlatinumFactoryMethod | Bank App",
+    "summary": "Class PlatinumFactoryMethod Namespace Bank.Domain Assembly Bank.Domain.dll public class PlatinumFactoryMethod : CreditCardFactoryMethod Inheritance object CreditCardFactoryMethod PlatinumFactoryMethod Inherited Members CreditCardFactoryMethod.CreateProduct() object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods MakeProduct() protected override ICreditCard MakeProduct() Returns ICreditCard"
+  },
+  "docs/Bank.Domain.Tests.CreditCardTests.html": {
+    "href": "docs/Bank.Domain.Tests.CreditCardTests.html",
+    "title": "Class CreditCardTests | Bank App",
+    "summary": "Class CreditCardTests Namespace Bank.Domain.Tests Assembly Bank.Domain.Tests.dll public class CreditCardTests Inheritance object CreditCardTests Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GivenCreditTypePlatinumChoosen_WhenRequestCreditCard_ThenNewValidCreditCard() [Test] public void GivenCreditTypePlatinumChoosen_WhenRequestCreditCard_ThenNewValidCreditCard() GivenCreditTypeSelected_WhenRequestCreditCard_ThenNewValidCreditCard() [Test] public void GivenCreditTypeSelected_WhenRequestCreditCard_ThenNewValidCreditCard() GivenCreditTypeTitaniumChoosen_WhenRequestCreditCard_ThenNewValidCreditCard() [Test] public void GivenCreditTypeTitaniumChoosen_WhenRequestCreditCard_ThenNewValidCreditCard()"
+  },
+  "docs/Bank.Domain.Tests.html": {
+    "href": "docs/Bank.Domain.Tests.html",
+    "title": "Namespace Bank.Domain.Tests | Bank App",
+    "summary": "Namespace Bank.Domain.Tests Classes CreditCardTests"
+  },
+  "docs/Bank.Domain.Titanium.html": {
+    "href": "docs/Bank.Domain.Titanium.html",
+    "title": "Class Titanium | Bank App",
+    "summary": "Class Titanium Namespace Bank.Domain Assembly Bank.Domain.dll public class Titanium : ICreditCard Inheritance object Titanium Implements ICreditCard Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GetAnnualCharge() public int GetAnnualCharge() Returns int GetCardType() public string GetCardType() Returns string GetCreditLimit() public int GetCreditLimit() Returns int"
+  },
+  "docs/Bank.Domain.TitaniumFactoryMethod.html": {
+    "href": "docs/Bank.Domain.TitaniumFactoryMethod.html",
+    "title": "Class TitaniumFactoryMethod | Bank App",
+    "summary": "Class TitaniumFactoryMethod Namespace Bank.Domain Assembly Bank.Domain.dll public class TitaniumFactoryMethod : CreditCardFactoryMethod Inheritance object CreditCardFactoryMethod TitaniumFactoryMethod Inherited Members CreditCardFactoryMethod.CreateProduct() object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods MakeProduct() protected override ICreditCard MakeProduct() Returns ICreditCard"
+  },
+  "docs/Bank.Domain.html": {
+    "href": "docs/Bank.Domain.html",
+    "title": "Namespace Bank.Domain | Bank App",
+    "summary": "Namespace Bank.Domain Classes CreditCardFactory CreditCardFactoryMethod MoneyBack MoneyBackFactoryMethod Platinum PlatinumFactoryMethod Titanium TitaniumFactoryMethod Interfaces ICreditCard"
+  },
+  "docs/getting-started.html": {
+    "href": "docs/getting-started.html",
+    "title": "Getting Started | Bank App",
+    "summary": "Getting Started"
+  },
+  "docs/introduction.html": {
+    "href": "docs/introduction.html",
+    "title": "Introduction | Bank App",
+    "summary": "Introduction"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "This is the HOMEPAGE. | Bank App",
+    "summary": "This is the HOMEPAGE. Diagrama de Clases Pruebas"
+  }
+}

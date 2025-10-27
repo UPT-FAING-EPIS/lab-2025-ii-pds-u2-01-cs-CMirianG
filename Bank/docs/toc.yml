@@ -1,0 +1,41 @@
+### YamlMime:TableOfContent
+items:
+- uid: Bank.Domain
+  name: Bank.Domain
+  type: Namespace
+  items:
+  - uid: Bank.Domain.CreditCardFactory
+    name: CreditCardFactory
+    type: Class
+  - uid: Bank.Domain.CreditCardFactoryMethod
+    name: CreditCardFactoryMethod
+    type: Class
+  - uid: Bank.Domain.ICreditCard
+    name: ICreditCard
+    type: Interface
+  - uid: Bank.Domain.MoneyBack
+    name: MoneyBack
+    type: Class
+  - uid: Bank.Domain.MoneyBackFactoryMethod
+    name: MoneyBackFactoryMethod
+    type: Class
+  - uid: Bank.Domain.Platinum
+    name: Platinum
+    type: Class
+  - uid: Bank.Domain.PlatinumFactoryMethod
+    name: PlatinumFactoryMethod
+    type: Class
+  - uid: Bank.Domain.Titanium
+    name: Titanium
+    type: Class
+  - uid: Bank.Domain.TitaniumFactoryMethod
+    name: TitaniumFactoryMethod
+    type: Class
+- uid: Bank.Domain.Tests
+  name: Bank.Domain.Tests
+  type: Namespace
+  items:
+  - uid: Bank.Domain.Tests.CreditCardTests
+    name: CreditCardTests
+    type: Class
+memberLayout: SamePage
