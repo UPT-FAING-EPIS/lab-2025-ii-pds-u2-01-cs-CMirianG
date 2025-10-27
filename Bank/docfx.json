@@ -10,7 +10,10 @@
           ]
         }
       ],
-      "dest": "docs"
+      "dest": "docs",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false,
+      "noRestore": false
     }
   ],
   "build": {
@@ -20,7 +23,15 @@
           "**/*.{md,yml}"
         ],
         "exclude": [
-          "_site/**"
+          "_site/**",
+          "obj/**",
+          "bin/**"
+        ]
+      },
+      {
+        "src": "docs",
+        "files": [
+          "**/*.yml"
         ]
       }
     ],
@@ -37,10 +48,26 @@
       "modern"
     ],
     "globalMetadata": {
-      "_appName": "Bank.App",
-      "_appTitle": "Bank App",
+      "_appName": "Bank.Domain",
+      "_appTitle": "Bank.Domain Documentation",
       "_enableSearch": true,
-      "pdf": true
-    }
+      "pdf": true,
+      "_appLogoPath": "logo.svg",
+      "_appFaviconPath": "favicon.ico"
+    },
+    "fileMetadata": [
+      {
+        "key": "ms.author",
+        "value": "Bank Development Team"
+      },
+      {
+        "key": "ms.service",
+        "value": "bank-domain"
+      },
+      {
+        "key": "ms.topic",
+        "value": "reference"
+      }
+    ]
   }
-}
+} 

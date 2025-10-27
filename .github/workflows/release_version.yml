@@ -1,0 +1,138 @@
+name: Release Version
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to release (e.g., v1.0.0)'
+        required: true
+        type: string
+
+env:
+  DOTNET_VERSION: '9.0.x'
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+    
+    - name: Cache NuGet packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.nuget/packages
+        key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
+        restore-keys: |
+          ${{ runner.os }}-nuget-
+    
+    - name: Restore dependencies
+      run: dotnet restore Bank/Bank.sln
+    
+    - name: Build solution
+      run: dotnet build Bank/Bank.sln --configuration Release --no-restore
+    
+    - name: Run unit tests
+      run: |
+        cd Bank
+        dotnet test Bank.Domain.Tests/Bank.Domain.Tests.csproj \
+          --configuration Release \
+          --logger trx \
+          --logger "console;verbosity=detailed" \
+          --results-directory ./TestResults
+    
+    - name: Pack NuGet package
+      run: |
+        cd Bank/Bank.Domain
+        dotnet pack --configuration Release --no-build --output ./nupkg
+    
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref_name || github.event.inputs.version }}
+        release_name: Release ${{ github.ref_name || github.event.inputs.version }}
+        body: |
+          ## Bank.Domain ${{ github.ref_name || github.event.inputs.version }}
+          
+          ### Cambios en esta versión:
+          - Mejoras en la implementación del patrón Factory Method
+          - Documentación completa de todas las clases
+          - Pruebas unitarias actualizadas
+          
+          ### Archivos incluidos:
+          - Paquete NuGet: Bank.Domain.${{ github.ref_name || github.event.inputs.version }}.nupkg
+          - Documentación generada con DocFX
+          
+          ### Instalación:
+          ```bash
+          dotnet add package Bank.Domain --version ${{ github.ref_name || github.event.inputs.version }}
+          ```
+        draft: false
+        prerelease: false
+    
+    - name: Upload NuGet Package
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: Bank/Bank.Domain/nupkg/Bank.Domain.${{ github.ref_name || github.event.inputs.version }}.nupkg
+        asset_name: Bank.Domain.${{ github.ref_name || github.event.inputs.version }}.nupkg
+        asset_content_type: application/octet-stream
+    
+    - name: Generate Documentation
+      run: |
+        # Instalar DocFX
+        wget https://github.com/dotnet/docfx/releases/download/v2.75.1/docfx.zip
+        unzip docfx.zip -d docfx
+        echo "$PWD/docfx" >> $GITHUB_PATH
+        
+        # Generar documentación
+        cd Bank
+        docfx metadata docfx.json
+        docfx build docfx.json
+        
+        # Crear archivo ZIP de la documentación
+        cd _site
+        zip -r ../documentation-${{ github.ref_name || github.event.inputs.version }}.zip .
+        cd ..
+    
+    - name: Upload Documentation
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: Bank/documentation-${{ github.ref_name || github.event.inputs.version }}.zip
+        asset_name: documentation-${{ github.ref_name || github.event.inputs.version }}.zip
+        asset_content_type: application/zip
+    
+    - name: Upload Test Results
+      run: |
+        cd Bank/TestResults
+        zip -r ../test-results-${{ github.ref_name || github.event.inputs.version }}.zip .
+        cd ..
+    
+    - name: Upload Test Results to Release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: Bank/test-results-${{ github.ref_name || github.event.inputs.version }}.zip
+        asset_name: test-results-${{ github.ref_name || github.event.inputs.version }}.zip
+        asset_content_type: application/zip

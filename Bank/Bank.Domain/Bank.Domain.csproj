@@ -4,6 +4,16 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    <PackageId>Bank.Domain</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Bank Development Team</Authors>
+    <Description>Biblioteca de dominio para el sistema de tarjetas de crédito del banco</Description>
+    <PackageProjectUrl>https://github.com/CMirianG/lab-2025-ii-pds-u2-01-cs-CMirianG</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/CMirianG/lab-2025-ii-pds-u2-01-cs-CMirianG</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>bank;credit-card;factory-pattern</PackageTags>
   </PropertyGroup>
 
 </Project>
