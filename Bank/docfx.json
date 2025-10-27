@@ -10,10 +10,7 @@
           ]
         }
       ],
-      "dest": "docs",
-      "disableGitFeatures": false,
-      "disableDefaultFilter": false,
-      "noRestore": false
+      "dest": "docs"
     }
   ],
   "build": {
@@ -50,24 +47,7 @@
     "globalMetadata": {
       "_appName": "Bank.Domain",
       "_appTitle": "Bank.Domain Documentation",
-      "_enableSearch": true,
-      "pdf": true,
-      "_appLogoPath": "logo.svg",
-      "_appFaviconPath": "favicon.ico"
-    },
-    "fileMetadata": [
-      {
-        "key": "ms.author",
-        "value": "Bank Development Team"
-      },
-      {
-        "key": "ms.service",
-        "value": "bank-domain"
-      },
-      {
-        "key": "ms.topic",
-        "value": "reference"
-      }
-    ]
+      "_enableSearch": true
+    }
   }
 } 
