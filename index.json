@@ -1,0 +1,82 @@
+{
+  "Cobertura/SummaryGithub.html": {
+    "href": "Cobertura/SummaryGithub.html",
+    "title": "Summary | Bank.Domain Documentation",
+    "summary": "Summary Summary Generated on: 27/10/2025 - 00:01:39 Coverage date: 26/10/2025 - 21:16:38 - 27/10/2025 - 00:01:09 Parser: MultiReport (5x Cobertura) Assemblies: 1 Classes: 8 Files: 8 Line coverage: 79.6% (47 of 59) Covered lines: 47 Uncovered lines: 12 Coverable lines: 59 Total lines: 130 Branch coverage: 33.3% (2 of 6) Covered branches: 2 Total branches: 6 Method coverage: Feature is only available for sponsors Coverage Bank.Domain - 79.6% Name Line Branch Bank.Domain 79.6% 33.3% Bank.Domain.CreditCardFactory 50% 33.3% Bank.Domain.CreditCardFactoryMethod 100% Bank.Domain.MoneyBack 100% Bank.Domain.MoneyBackFactoryMethod 0% Bank.Domain.Platinum 100% Bank.Domain.PlatinumFactoryMethod 100% Bank.Domain.Titanium 100% Bank.Domain.TitaniumFactoryMethod 100%"
+  },
+  "docs/Bank.Domain.CreditCardFactory.html": {
+    "href": "docs/Bank.Domain.CreditCardFactory.html",
+    "title": "Class CreditCardFactory | Bank.Domain Documentation",
+    "summary": "Class CreditCardFactory Namespace Bank.Domain Assembly Bank.Domain.dll Factory estático que implementa el patrón Factory para crear tarjetas de crédito. Permite crear diferentes tipos de tarjetas basándose en el tipo especificado. public class CreditCardFactory Inheritance object CreditCardFactory Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GetCreditCard(string) Crea una nueva tarjeta de crédito basándose en el tipo especificado. public static ICreditCard? GetCreditCard(string cardType) Parameters cardType string El tipo de tarjeta a crear. Valores válidos: \"MoneyBack\", \"Titanium\", \"Platinum\". Returns ICreditCard Una instancia de ICreditCard del tipo especificado, o null si el tipo no es válido. Examples ICreditCard card = CreditCardFactory.GetCreditCard(\"MoneyBack\"); if (card != null) { Console.WriteLine($\"Tipo: {card.GetCardType()}\"); Console.WriteLine($\"Límite: {card.GetCreditLimit()}\"); }"
+  },
+  "docs/Bank.Domain.CreditCardFactoryMethod.html": {
+    "href": "docs/Bank.Domain.CreditCardFactoryMethod.html",
+    "title": "Class CreditCardFactoryMethod | Bank.Domain Documentation",
+    "summary": "Class CreditCardFactoryMethod Namespace Bank.Domain Assembly Bank.Domain.dll Clase abstracta que implementa el patrón Factory Method para crear tarjetas de crédito. Define el esqueleto del algoritmo de creación, delegando la creación específica a las subclases. public abstract class CreditCardFactoryMethod Inheritance object CreditCardFactoryMethod Derived MoneyBackFactoryMethod PlatinumFactoryMethod TitaniumFactoryMethod Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods CreateProduct() Método template que define el algoritmo de creación de tarjetas de crédito. También contiene lógica de negocio que depende de los objetos Product devueltos por el factory method. public ICreditCard CreateProduct() Returns ICreditCard Una instancia de ICreditCard creada por la subclase específica. Remarks La responsabilidad principal del Creator no es crear productos. Usualmente contiene lógica de negocio central que depende de los objetos Product devueltos por el factory method. MakeProduct() Método abstracto que debe ser implementado por las subclases para crear el producto específico. protected abstract ICreditCard MakeProduct() Returns ICreditCard Una instancia de ICreditCard del tipo específico."
+  },
+  "docs/Bank.Domain.ICreditCard.html": {
+    "href": "docs/Bank.Domain.ICreditCard.html",
+    "title": "Interface ICreditCard | Bank.Domain Documentation",
+    "summary": "Interface ICreditCard Namespace Bank.Domain Assembly Bank.Domain.dll Interfaz que define el contrato para las tarjetas de crédito del banco. Implementa el patrón Factory Method para la creación de diferentes tipos de tarjetas. public interface ICreditCard Methods GetAnnualCharge() Obtiene el cargo anual de la tarjeta de crédito. int GetAnnualCharge() Returns int El cargo anual en unidades monetarias. GetCardType() Obtiene el tipo de tarjeta de crédito. string GetCardType() Returns string El nombre del tipo de tarjeta de crédito. GetCreditLimit() Obtiene el límite de crédito de la tarjeta. int GetCreditLimit() Returns int El límite de crédito en unidades monetarias."
+  },
+  "docs/Bank.Domain.MoneyBack.html": {
+    "href": "docs/Bank.Domain.MoneyBack.html",
+    "title": "Class MoneyBack | Bank.Domain Documentation",
+    "summary": "Class MoneyBack Namespace Bank.Domain Assembly Bank.Domain.dll Implementación de tarjeta de crédito MoneyBack. Esta tarjeta ofrece un límite de crédito moderado con un cargo anual bajo. Ideal para usuarios que buscan una tarjeta básica con beneficios de cashback. public class MoneyBack : ICreditCard Inheritance object MoneyBack Implements ICreditCard Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GetAnnualCharge() Obtiene el cargo anual para la tarjeta MoneyBack. public int GetAnnualCharge() Returns int El cargo anual de $500. GetCardType() Obtiene el tipo de tarjeta MoneyBack. public string GetCardType() Returns string El nombre \"MoneyBack\" como tipo de tarjeta. GetCreditLimit() Obtiene el límite de crédito para la tarjeta MoneyBack. public int GetCreditLimit() Returns int El límite de crédito de $15,000."
+  },
+  "docs/Bank.Domain.MoneyBackFactoryMethod.html": {
+    "href": "docs/Bank.Domain.MoneyBackFactoryMethod.html",
+    "title": "Class MoneyBackFactoryMethod | Bank.Domain Documentation",
+    "summary": "Class MoneyBackFactoryMethod Namespace Bank.Domain Assembly Bank.Domain.dll Implementación concreta del Factory Method para crear tarjetas MoneyBack. Esta clase se encarga de la creación específica de tarjetas MoneyBack. public class MoneyBackFactoryMethod : CreditCardFactoryMethod Inheritance object CreditCardFactoryMethod MoneyBackFactoryMethod Inherited Members CreditCardFactoryMethod.CreateProduct() object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods MakeProduct() Crea una nueva instancia de tarjeta MoneyBack. protected override ICreditCard MakeProduct() Returns ICreditCard Una nueva instancia de MoneyBack."
+  },
+  "docs/Bank.Domain.Platinum.html": {
+    "href": "docs/Bank.Domain.Platinum.html",
+    "title": "Class Platinum | Bank.Domain Documentation",
+    "summary": "Class Platinum Namespace Bank.Domain Assembly Bank.Domain.dll Implementación de tarjeta de crédito Platinum Plus. Esta tarjeta ofrece el límite de crédito más alto con beneficios exclusivos. Diseñada para usuarios premium con excelente historial crediticio. public class Platinum : ICreditCard Inheritance object Platinum Implements ICreditCard Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GetAnnualCharge() Obtiene el cargo anual para la tarjeta Platinum Plus. public int GetAnnualCharge() Returns int El cargo anual de $2,000. GetCardType() Obtiene el tipo de tarjeta Platinum Plus. public string GetCardType() Returns string El nombre \"Platinum Plus\" como tipo de tarjeta. GetCreditLimit() Obtiene el límite de crédito para la tarjeta Platinum Plus. public int GetCreditLimit() Returns int El límite de crédito de $35,000."
+  },
+  "docs/Bank.Domain.PlatinumFactoryMethod.html": {
+    "href": "docs/Bank.Domain.PlatinumFactoryMethod.html",
+    "title": "Class PlatinumFactoryMethod | Bank.Domain Documentation",
+    "summary": "Class PlatinumFactoryMethod Namespace Bank.Domain Assembly Bank.Domain.dll Implementación concreta del Factory Method para crear tarjetas Platinum Plus. Esta clase se encarga de la creación específica de tarjetas Platinum Plus. public class PlatinumFactoryMethod : CreditCardFactoryMethod Inheritance object CreditCardFactoryMethod PlatinumFactoryMethod Inherited Members CreditCardFactoryMethod.CreateProduct() object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods MakeProduct() Crea una nueva instancia de tarjeta Platinum Plus. protected override ICreditCard MakeProduct() Returns ICreditCard Una nueva instancia de Platinum."
+  },
+  "docs/Bank.Domain.Tests.CreditCardTests.html": {
+    "href": "docs/Bank.Domain.Tests.CreditCardTests.html",
+    "title": "Class CreditCardTests | Bank.Domain Documentation",
+    "summary": "Class CreditCardTests Namespace Bank.Domain.Tests Assembly Bank.Domain.Tests.dll public class CreditCardTests Inheritance object CreditCardTests Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GivenCreditTypePlatinumChoosen_WhenRequestCreditCard_ThenNewValidCreditCard() [Test] public void GivenCreditTypePlatinumChoosen_WhenRequestCreditCard_ThenNewValidCreditCard() GivenCreditTypeSelected_WhenRequestCreditCard_ThenNewValidCreditCard() [Test] public void GivenCreditTypeSelected_WhenRequestCreditCard_ThenNewValidCreditCard() GivenCreditTypeTitaniumChoosen_WhenRequestCreditCard_ThenNewValidCreditCard() [Test] public void GivenCreditTypeTitaniumChoosen_WhenRequestCreditCard_ThenNewValidCreditCard()"
+  },
+  "docs/Bank.Domain.Tests.html": {
+    "href": "docs/Bank.Domain.Tests.html",
+    "title": "Namespace Bank.Domain.Tests | Bank.Domain Documentation",
+    "summary": "Namespace Bank.Domain.Tests Classes CreditCardTests"
+  },
+  "docs/Bank.Domain.Titanium.html": {
+    "href": "docs/Bank.Domain.Titanium.html",
+    "title": "Class Titanium | Bank.Domain Documentation",
+    "summary": "Class Titanium Namespace Bank.Domain Assembly Bank.Domain.dll Implementación de tarjeta de crédito Titanium Edge. Esta tarjeta ofrece un límite de crédito intermedio con beneficios premium. Diseñada para usuarios con buen historial crediticio que buscan más beneficios. public class Titanium : ICreditCard Inheritance object Titanium Implements ICreditCard Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GetAnnualCharge() Obtiene el cargo anual para la tarjeta Titanium Edge. public int GetAnnualCharge() Returns int El cargo anual de $1,500. GetCardType() Obtiene el tipo de tarjeta Titanium Edge. public string GetCardType() Returns string El nombre \"Titanium Edge\" como tipo de tarjeta. GetCreditLimit() Obtiene el límite de crédito para la tarjeta Titanium Edge. public int GetCreditLimit() Returns int El límite de crédito de $25,000."
+  },
+  "docs/Bank.Domain.TitaniumFactoryMethod.html": {
+    "href": "docs/Bank.Domain.TitaniumFactoryMethod.html",
+    "title": "Class TitaniumFactoryMethod | Bank.Domain Documentation",
+    "summary": "Class TitaniumFactoryMethod Namespace Bank.Domain Assembly Bank.Domain.dll Implementación concreta del Factory Method para crear tarjetas Titanium Edge. Esta clase se encarga de la creación específica de tarjetas Titanium Edge. public class TitaniumFactoryMethod : CreditCardFactoryMethod Inheritance object CreditCardFactoryMethod TitaniumFactoryMethod Inherited Members CreditCardFactoryMethod.CreateProduct() object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods MakeProduct() Crea una nueva instancia de tarjeta Titanium Edge. protected override ICreditCard MakeProduct() Returns ICreditCard Una nueva instancia de Titanium."
+  },
+  "docs/Bank.Domain.html": {
+    "href": "docs/Bank.Domain.html",
+    "title": "Namespace Bank.Domain | Bank.Domain Documentation",
+    "summary": "Namespace Bank.Domain Classes CreditCardFactory Factory estático que implementa el patrón Factory para crear tarjetas de crédito. Permite crear diferentes tipos de tarjetas basándose en el tipo especificado. CreditCardFactoryMethod Clase abstracta que implementa el patrón Factory Method para crear tarjetas de crédito. Define el esqueleto del algoritmo de creación, delegando la creación específica a las subclases. MoneyBack Implementación de tarjeta de crédito MoneyBack. Esta tarjeta ofrece un límite de crédito moderado con un cargo anual bajo. Ideal para usuarios que buscan una tarjeta básica con beneficios de cashback. MoneyBackFactoryMethod Implementación concreta del Factory Method para crear tarjetas MoneyBack. Esta clase se encarga de la creación específica de tarjetas MoneyBack. Platinum Implementación de tarjeta de crédito Platinum Plus. Esta tarjeta ofrece el límite de crédito más alto con beneficios exclusivos. Diseñada para usuarios premium con excelente historial crediticio. PlatinumFactoryMethod Implementación concreta del Factory Method para crear tarjetas Platinum Plus. Esta clase se encarga de la creación específica de tarjetas Platinum Plus. Titanium Implementación de tarjeta de crédito Titanium Edge. Esta tarjeta ofrece un límite de crédito intermedio con beneficios premium. Diseñada para usuarios con buen historial crediticio que buscan más beneficios. TitaniumFactoryMethod Implementación concreta del Factory Method para crear tarjetas Titanium Edge. Esta clase se encarga de la creación específica de tarjetas Titanium Edge. Interfaces ICreditCard Interfaz que define el contrato para las tarjetas de crédito del banco. Implementa el patrón Factory Method para la creación de diferentes tipos de tarjetas."
+  },
+  "docs/getting-started.html": {
+    "href": "docs/getting-started.html",
+    "title": "Getting Started | Bank.Domain Documentation",
+    "summary": "Getting Started"
+  },
+  "docs/introduction.html": {
+    "href": "docs/introduction.html",
+    "title": "Introduction | Bank.Domain Documentation",
+    "summary": "Introduction"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "Bank.Domain Documentation | Bank.Domain Documentation",
+    "summary": "Bank.Domain Documentation Esta es la documentación generada automáticamente para la biblioteca Bank.Domain. Enlaces útiles API Reference Getting Started Introduction Información del proyecto Versión: 1.0.0 Framework: .NET 9.0 Patrón: Factory Method Licencia: MIT Contacto Para preguntas o sugerencias, por favor abre un issue en el repositorio de GitHub."
+  }
+}

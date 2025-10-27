@@ -1,0 +1,253 @@
+{
+  "source_base_path": "/home/runner/work/lab-2025-ii-pds-u2-01-cs-CMirianG/lab-2025-ii-pds-u2-01-cs-CMirianG/Bank",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Cobertura/SummaryGithub.md",
+      "output": {
+        ".html": {
+          "relative_path": "Cobertura/SummaryGithub.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.CreditCardFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.CreditCardFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.CreditCardFactory",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.CreditCardFactory.yml\" sourcestartlinenumber=\"1\">Factory estático que implementa el patrón Factory para crear tarjetas de crédito.\nPermite crear diferentes tipos de tarjetas basándose en el tipo especificado.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.CreditCardFactoryMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.CreditCardFactoryMethod.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.CreditCardFactoryMethod",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.CreditCardFactoryMethod.yml\" sourcestartlinenumber=\"1\">Clase abstracta que implementa el patrón Factory Method para crear tarjetas de crédito.\nDefine el esqueleto del algoritmo de creación, delegando la creación específica a las subclases.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.ICreditCard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.ICreditCard.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.ICreditCard",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.ICreditCard.yml\" sourcestartlinenumber=\"1\">Interfaz que define el contrato para las tarjetas de crédito del banco.\nImplementa el patrón Factory Method para la creación de diferentes tipos de tarjetas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.MoneyBack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.MoneyBack.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.MoneyBack",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.MoneyBack.yml\" sourcestartlinenumber=\"1\">Implementación de tarjeta de crédito MoneyBack.\nEsta tarjeta ofrece un límite de crédito moderado con un cargo anual bajo.\nIdeal para usuarios que buscan una tarjeta básica con beneficios de cashback.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.MoneyBackFactoryMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.MoneyBackFactoryMethod.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.MoneyBackFactoryMethod",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.MoneyBackFactoryMethod.yml\" sourcestartlinenumber=\"1\">Implementación concreta del Factory Method para crear tarjetas MoneyBack.\nEsta clase se encarga de la creación específica de tarjetas MoneyBack.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.Platinum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.Platinum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.Platinum",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.Platinum.yml\" sourcestartlinenumber=\"1\">Implementación de tarjeta de crédito Platinum Plus.\nEsta tarjeta ofrece el límite de crédito más alto con beneficios exclusivos.\nDiseñada para usuarios premium con excelente historial crediticio.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.PlatinumFactoryMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.PlatinumFactoryMethod.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.PlatinumFactoryMethod",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.PlatinumFactoryMethod.yml\" sourcestartlinenumber=\"1\">Implementación concreta del Factory Method para crear tarjetas Platinum Plus.\nEsta clase se encarga de la creación específica de tarjetas Platinum Plus.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.Tests.CreditCardTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.Tests.CreditCardTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.Tests.CreditCardTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.Tests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.Tests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.Tests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.Titanium.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.Titanium.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.Titanium",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.Titanium.yml\" sourcestartlinenumber=\"1\">Implementación de tarjeta de crédito Titanium Edge.\nEsta tarjeta ofrece un límite de crédito intermedio con beneficios premium.\nDiseñada para usuarios con buen historial crediticio que buscan más beneficios.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.TitaniumFactoryMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.TitaniumFactoryMethod.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.TitaniumFactoryMethod",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.TitaniumFactoryMethod.yml\" sourcestartlinenumber=\"1\">Implementación concreta del Factory Method para crear tarjetas Titanium Edge.\nEsta clase se encarga de la creación específica de tarjetas Titanium Edge.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain",
+      "Summary": null
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
