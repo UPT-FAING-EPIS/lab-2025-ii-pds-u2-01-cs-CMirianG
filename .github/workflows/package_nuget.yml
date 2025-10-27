@@ -47,32 +47,13 @@ jobs:
         dotnet test Bank.Domain.Tests/Bank.Domain.Tests.csproj \
           --configuration Release \
           --collect:"XPlat Code Coverage" \
-          --results-directory Bank.Domain.Tests/TestResults \
           --logger trx \
-          --logger "console;verbosity=detailed" \
-          --settings coverlet.runsettings
-    
-    - name: Generate coverage report
-      run: |
-        cd Bank
-        dotnet tool install -g dotnet-reportgenerator-globaltool
-        # Buscar archivos de cobertura
-        find Bank.Domain.Tests/TestResults -name "coverage.cobertura.xml" -type f || true
-        if find Bank.Domain.Tests/TestResults -name "coverage.cobertura.xml" -type f | grep -q .; then
-          reportgenerator \
-            -reports:"Bank.Domain.Tests/TestResults/**/coverage.cobertura.xml" \
-            -targetdir:"Bank.Domain.Tests/TestResults/CoverageReport" \
-            -reporttypes:"Html;Cobertura;OpenCover" \
-            -assemblyfilters:"-*.Tests" \
-            -classfilters:"-*.Tests.*"
-        else
-          echo "No coverage files found, skipping report generation"
-        fi
+          --logger "console;verbosity=detailed"
     
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3
       with:
-        files: Bank/Bank.Domain.Tests/TestResults/**/coverage.cobertura.xml
+        files: Bank/**/coverage.cobertura.xml
         flags: unittests
         name: codecov-umbrella
         fail_ci_if_error: false
@@ -87,7 +68,7 @@ jobs:
           -Dsonar.projectKey=${{ env.SONAR_PROJECT_KEY }}
           -Dsonar.organization=${{ env.SONAR_ORGANIZATION }}
           -Dsonar.host.url=${{ env.SONAR_HOST_URL }}
-          -Dsonar.cs.opencover.reportsPaths=Bank/Bank.Domain.Tests/TestResults/**/coverage.opencover.xml
+          -Dsonar.cs.opencover.reportsPaths=Bank/**/coverage.opencover.xml
           -Dsonar.coverage.exclusions=**/TestResults/**,**/Tests/**,**/*Tests.cs,**/*Test.cs
           -Dsonar.exclusions=**/bin/**,**/obj/**,**/TestResults/**,**/_site/**
           -Dsonar.sources=Bank/Bank.Domain
@@ -98,7 +79,7 @@ jobs:
       if: success() || failure()
       with:
         name: NUnit Tests
-        path: Bank/Bank.Domain.Tests/TestResults/*.trx
+        path: Bank/**/*.trx
         reporter: dotnet-trx
         fail-on-error: true
 
